@@ -5,6 +5,7 @@
   "scripts": {
     "prepare": "husky install && npm run setup",
     "precommit": "npm-run-all precommit:*",
+    "postinstall": "patch-package",
     "setup": "npm-run-all setup:*",
     "test": "npm-run-all test:*",
     "build:example" : "npm --prefix ./packages/example run build",
