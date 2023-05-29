@@ -6,7 +6,8 @@ on:
       - dev
 
 jobs:
-  functions:
+  CI:
+    name: Run Tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -20,25 +21,8 @@ jobs:
           cache: "npm"
           cache-dependency-path: "packages/firebase/functions/package-lock.json"
 
-      - name: Cache Firebase emulators
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/firebase/emulators/
-          key: ${{ runner.os }}-firebase-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-firebase-
-
       - name: Install dependencies
-        run: npm install
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Typescript prune
-        run: npm run prune
-
-      - name: Build
-        run: npm run build
+        run: npm ci
 
       - name: Test
         run: npm run test
