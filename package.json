@@ -1,0 +1,21 @@
+{
+  "name": "consume-sum",
+  "version": "1.0.0",
+  "description": "This is a test of a bootstrap project to consume this example TypeScript utility package published to the NPM package repository @charneykaye/compute-sum",
+  "scripts": {
+    "prepare": "husky install && npm run setup",
+    "precommit": "npm-run-all precommit:*",
+    "setup": "npm-run-all setup:*",
+    "test": "npm-run-all test:*",
+    "build:example" : "npm --prefix ./packages/example run build",
+    "precommit:example" : "npm --prefix ./packages/example run precommit",
+    "setup:example": "npm --prefix ./packages/example install",
+    "test:example": "npm --prefix ./packages/example test"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,49 @@
+languageCode: en-us
+title: XJ music
+paginate: 25
+copyright: XJ Music Inc
+theme: xj-theme
+
+taxonomies:
+  tags: tags
+
+permalinks:
+  merch: '/merch/:slug/'
+  blog: '/blog/:slug/'
+  artists: '/artists/:slug/'
+  press: '/press/:slug/'
+  page: '/:slug/'
+  tags: '/tags/:slug/'
+
+params:
+  title: XJ music
+  title_separator: " - "
+  description: by artists in a new algorithmic medium, streaming live 24/7. Always changing. Never repeating.
+  images:
+    - '/images/cover.jpg'
+  author: XJ music
+  email: hi@xj.io
+  googleAnalytics: G-3S7259XYQJ
+  date_format: 'Mon Jan 02, 2006'
+  truncate: true
+  sidebar: {}
+  social: {}
+  navItems:
+    - { url: '/listen/', label: Listen }
+    - { url: '/artists/', url2: '/channels/', label: Explore }
+    - { url: '/mission/', label: Mission }
+    - { url: '/merch/', label: Merch }
+    - { url: '/blog/', label: Blog }
+
+related:
+  includeNewer: true
+  indices:
+    - name: tags
+      weight: 100
+  threshold: 80
+  toLower: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

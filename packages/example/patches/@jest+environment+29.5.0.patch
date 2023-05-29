@@ -1,0 +1,12 @@
+diff --git a/node_modules/@jest/environment/build/index.d.ts b/node_modules/@jest/environment/build/index.d.ts
+index 1837e6a..4e62044 100644
+--- a/node_modules/@jest/environment/build/index.d.ts
++++ b/node_modules/@jest/environment/build/index.d.ts
+@@ -398,6 +398,7 @@ export declare interface JestEnvironmentConfig {
+   globalConfig: Config.GlobalConfig;
+ }
+ 
++// @ts-ignore
+ export declare interface JestImportMeta extends ImportMeta {
+   jest: Jest;
+ }

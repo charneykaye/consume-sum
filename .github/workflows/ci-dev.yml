@@ -1,0 +1,41 @@
+name: Development CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dev
+
+jobs:
+  CI:
+    name: Build, Test, Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.14
+          cache: 'npm'
+
+      - name: Install npm packages
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Typescript prune
+        run: npm run prune
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test
+
