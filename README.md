@@ -1,7 +1,4 @@
-
-|           | **Production**                                                                                                                                                                  | **Development**                                                                                                                                                               |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CI Status | [![test package](https://github.com/charneykaye/consume-sum/actions/workflows/ci_prod.yml/badge.svg)](https://github.com/charneykaye/consume-sum/actions/workflows/ci_prod.yml) | [![test package](https://github.com/charneykaye/consume-sum/actions/workflows/ci_dev.yml/badge.svg)](https://github.com/charneykaye/consume-sum/actions/workflows/ci_dev.yml) |
+[![Main branch CI](https://github.com/charneykaye/consume-sum/actions/workflows/main.yml/badge.svg)](https://github.com/charneykaye/consume-sum/actions/workflows/main.yml)
 
 # TypeScript NPM Package Consumer
 
